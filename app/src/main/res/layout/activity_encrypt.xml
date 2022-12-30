@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Encrypt">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/AppNameTextSize"
+            android:text="@string/app_name"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:text="ENCRYPT"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            app:boxCornerRadiusBottomEnd="@dimen/cornerRadius"
+            app:boxCornerRadiusBottomStart="@dimen/cornerRadius"
+            app:boxCornerRadiusTopEnd="@dimen/cornerRadius"
+            app:boxCornerRadiusTopStart="@dimen/cornerRadius"
+            app:hintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:hint="Write a sentence"
+            app:boxStrokeColor="@color/black"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/sentenceToEncrypt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:inputType="textMultiLine|textCapSentences"
+                android:minLines="10"
+                android:maxLines="10"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/encryptSubmitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:padding="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:cornerRadius="@dimen/cornerRadius"
+        android:text="Encrypt"
+        android:backgroundTint="@color/black"
+        android:onClick="encryptSentence"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

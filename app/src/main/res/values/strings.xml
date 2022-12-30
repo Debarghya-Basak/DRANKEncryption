@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">DRANKEncryption</string>
+
+    <dimen name="cornerRadius">20sp</dimen>
+    <dimen name="AppNameTextSize">40sp</dimen>
+</resources>
